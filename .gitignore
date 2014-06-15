@@ -1,2 +1,13 @@
+*.log
+*.ini
+all_projects/vs2008/**
+!all_projects/vs2008/*.bat
+!all_projects/vs2008/*.sln
+coca/**/autogen
+**/codeblocks/*.layout
 **/build/config.*.*.lua
-coca.log
+**/build/codeblocks
+**/build/vs2008
+**/build/gmake
+**/doc/**
+!**/doc/*.Doxyfile
