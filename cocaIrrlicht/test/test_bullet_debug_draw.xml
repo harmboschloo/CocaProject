@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coca_xml version="2">
+    <system>
+        <description>
+            Hello cocaIrrlicht!
+            By H.W. Boschloo
+        </description>
+        <composite_node name="Root" disabled_count="0">
+            <component_node component_id="uTimer" name="timer" disabled_count="0">
+                <attribute name="realTime" enabled="1" auto_update="1" sink_id="0">
+                    <value>0</value>
+                </attribute>
+                <attribute name="run" enabled="1" auto_update="1">
+                    <sink id="1"/>
+                    <sink id="2"/>
+                    <sink id="3"/>
+                </attribute>
+                <attribute name="runTime" enabled="1" auto_update="1"/>
+                <attribute name="runTimeDifference" enabled="1" auto_update="1"/>
+                <attribute name="targetTime" enabled="1" auto_update="1"/>
+                <attribute name="targetTimeDelay" enabled="1" auto_update="1" sink_id="4">
+                    <value>0.016667</value>
+                </attribute>
+            </component_node>
+            <component_node component_id="uFrameRateRecorder" name="frame rate recorder" disabled_count="0">
+                <attribute name="frameRate" enabled="1" auto_update="1">
+                    <sink id="5"/>
+                </attribute>
+                <attribute name="recordFrame" enabled="1" auto_update="1" sink_id="2"/>
+                <attribute name="recordTime" enabled="1" auto_update="1" sink_id="6">
+                    <value>1</value>
+                </attribute>
+            </component_node>
+            <component_node component_id="uFloat32ToString" disabled_count="0">
+                <attribute name="data" enabled="1" auto_update="1" sink_id="5"/>
+                <attribute name="string" enabled="1" auto_update="1">
+                    <sink id="7"/>
+                </attribute>
+            </component_node>
+            <component_node component_id="uLogString" disabled_count="1">
+                <attribute name="prefix" enabled="1" auto_update="1" sink_id="8">
+                    <value>Recorded frame rate: </value>
+                </attribute>
+                <attribute name="string" enabled="1" auto_update="1" sink_id="7"/>
+                <attribute name="suffix" enabled="1" auto_update="1" sink_id="9">
+                    <value> (FPS)</value>
+                </attribute>
+            </component_node>
+            <composite_node name="Graphics" disabled_count="0">
+                <component_node component_id="irrDevice" name="3d device" disabled_count="0">
+                    <attribute name="bits" enabled="1" auto_update="1" sink_id="10">
+                        <value>16</value>
+                    </attribute>
+                    <attribute name="device" enabled="1" auto_update="1">
+                        <sink id="11"/>
+                        <sink id="12"/>
+                        <sink id="13"/>
+                    </attribute>
+                    <attribute name="driver" enabled="1" auto_update="1" sink_id="14">
+                        <value>5</value>
+                    </attribute>
+                    <attribute name="fullscreen" enabled="1" auto_update="1" sink_id="15">
+                        <value>0</value>
+                    </attribute>
+                    <attribute name="run" enabled="1" auto_update="0" sink_id="1">
+                        <sink id="16"/>
+                    </attribute>
+                    <attribute name="size" enabled="1" auto_update="1" sink_id="17">
+                        <value>800 600</value>
+                    </attribute>
+                    <attribute name="stencilBuffer" enabled="1" auto_update="1" sink_id="18">
+                        <value>0</value>
+                    </attribute>
+                    <attribute name="vsync" enabled="1" auto_update="1" sink_id="19">
+                        <value>1</value>
+                    </attribute>
+                    <attribute name="windowActive" enabled="1" auto_update="1">
+                        <sink id="20"/>
+                    </attribute>
+                </component_node>
+                <component_node component_id="irrWindowCaption" name="window caption" disabled_count="0">
+                    <attribute name="caption" enabled="1" auto_update="1" sink_id="21">
+                        <value>Hello Bullet!</value>
+                    </attribute>
+                    <attribute name="device" enabled="1" auto_update="1" sink_id="13"/>
+                    <attribute name="showDriver" enabled="1" auto_update="1" sink_id="22">
+                        <value>1</value>
+                    </attribute>
+                    <attribute name="showFps" enabled="1" auto_update="1" sink_id="23">
+                        <value>1</value>
+                    </attribute>
+                    <attribute name="update" enabled="1" auto_update="1" sink_id="24"/>
+                </component_node>
+                <component_node component_id="irrVideoDriver" name="video driver" disabled_count="0">
+                    <attribute name="bg" enabled="1" auto_update="1" sink_id="25">
+                        <value>255 0 100 150</value>
+                    </attribute>
+                    <attribute name="clearBackBuffer" enabled="1" auto_update="1" sink_id="26">
+                        <value>1</value>
+                    </attribute>
+                    <attribute name="clearZBuffer" enabled="1" auto_update="1" sink_id="27">
+                        <value>1</value>
+                    </attribute>
+                    <attribute name="device" enabled="1" auto_update="1" sink_id="11"/>
+                    <attribute name="draw" enabled="1" auto_update="1">
+                        <sink id="28"/>
+                        <sink id="29"/>
+                    </attribute>
+                    <attribute name="driver" enabled="1" auto_update="1">
+                        <sink id="30"/>
+                    </attribute>
+                    <attribute name="postDraw" enabled="1" auto_update="1">
+                        <sink id="24"/>
+                    </attribute>
+                    <attribute name="preDraw" enabled="1" auto_update="1"/>
+                    <attribute name="run" enabled="1" auto_update="1" sink_id="16"/>
+                </component_node>
+                <component_node component_id="irrSceneManager" name="scene manager" disabled_count="0">
+                    <attribute name="device" enabled="1" auto_update="1" sink_id="12"/>
+                    <attribute name="draw" enabled="1" auto_update="1" sink_id="28"/>
+                    <attribute name="manager" enabled="1" auto_update="1"/>
+                    <attribute name="root" enabled="1" auto_update="1">
+                        <sink id="31"/>
+                        <sink id="32"/>
+                    </attribute>
+                </component_node>
+                <composite_node name="0" disabled_count="0">
+                    <component_node component_id="irrAxisSystemSceneNode" name="axis system" disabled_count="0">
+                        <attribute name="parent" enabled="1" auto_update="1" sink_id="31"/>
+                        <attribute name="position" enabled="1" auto_update="1" sink_id="33">
+                            <value>0 0 0</value>
+                        </attribute>
+                        <attribute name="rotation" enabled="1" auto_update="1" sink_id="34">
+                            <value>0 0 0</value>
+                        </attribute>
+                        <attribute name="scale" enabled="1" auto_update="1" sink_id="35">
+                            <value>1 1 1</value>
+                        </attribute>
+                        <attribute name="visible" enabled="1" auto_update="1" sink_id="36">
+                            <value>1</value>
+                        </attribute>
+                    </component_node>
+                </composite_node>
+                <composite_node name="bullet debug" disabled_count="0">
+                    <component_node component_id="irrBulletDebugDrawer" disabled_count="0">
+                        <attribute name="drawer" enabled="1" auto_update="1">
+                            <sink id="37"/>
+                        </attribute>
+                        <attribute name="driver" enabled="1" auto_update="1" sink_id="30"/>
+                    </component_node>
+                </composite_node>
+                <composite_node name="camera" disabled_count="0">
+                    <component_node component_id="irrCameraSceneNodeFPS" name="camera" disabled_count="0">
+                        <attribute name="aspectRatio" enabled="1" auto_update="1" sink_id="38">
+                            <value>1.33333</value>
+                        </attribute>
+                        <attribute name="bindTargetAndRotation" enabled="1" auto_update="1" sink_id="39">
+                            <value>1</value>
+                        </attribute>
+                        <attribute name="camera" enabled="1" auto_update="1"/>
+                        <attribute name="farClipPlane" enabled="1" auto_update="1" sink_id="40">
+                            <value>2000</value>
+                        </attribute>
+                        <attribute name="fov" enabled="1" auto_update="1" sink_id="41">
+                            <value>1.25664</value>
+                        </attribute>
+                        <attribute name="inputReceiverEnabled" enabled="1" auto_update="1" sink_id="20"/>
+                        <attribute name="moveSpeed" enabled="1" auto_update="1" sink_id="42">
+                            <value>0.02</value>
+                        </attribute>
+                        <attribute name="nearClipPlane" enabled="1" auto_update="1" sink_id="43">
+                            <value>0</value>
+                        </attribute>
+                        <attribute name="node" enabled="1" auto_update="1"/>
+                        <attribute name="parent" enabled="1" auto_update="1" sink_id="32"/>
+                        <attribute name="position" enabled="1" auto_update="1" sink_id="44">
+                            <value>1.84107 9.10083 16.625</value>
+                        </attribute>
+                        <attribute name="rotation" enabled="1" auto_update="1" sink_id="45">
+                            <value>29.8221 187.509 0</value>
+                        </attribute>
+                        <attribute name="rotationSpeed" enabled="1" auto_update="1" sink_id="46">
+                            <value>100</value>
+                        </attribute>
+                        <attribute name="scale" enabled="1" auto_update="1" sink_id="47">
+                            <value>1 1 1</value>
+                        </attribute>
+                        <attribute name="target" enabled="1" auto_update="1" sink_id="48">
+                            <value>-0.3178 -0.369003 0.246147</value>
+                        </attribute>
+                        <attribute name="upVector" enabled="1" auto_update="1" sink_id="49">
+                            <value>0 1 0</value>
+                        </attribute>
+                        <attribute name="visible" enabled="1" auto_update="1" sink_id="50">
+                            <value>1</value>
+                        </attribute>
+                    </component_node>
+                </composite_node>
+            </composite_node>
+            <composite_node name="Physics" disabled_count="0">
+                <composite_node name="world" disabled_count="0">
+                    <component_node component_id="btDbvtBroadphase" disabled_count="0">
+                        <attribute name="broadphase" enabled="1" auto_update="1">
+                            <sink id="51"/>
+                        </attribute>
+                    </component_node>
+                    <component_node component_id="btDefaultCollisionConfiguration" disabled_count="0">
+                        <attribute name="configuration" enabled="1" auto_update="1">
+                            <sink id="52"/>
+                            <sink id="53"/>
+                        </attribute>
+                    </component_node>
+                    <component_node component_id="btSequentialImpulseConstraintSolver" disabled_count="0">
+                        <attribute name="solver" enabled="1" auto_update="1">
+                            <sink id="54"/>
+                        </attribute>
+                    </component_node>
+                    <component_node component_id="btCollisionDispatcher" disabled_count="0">
+                        <attribute name="configuration" enabled="1" auto_update="1" sink_id="53"/>
+                        <attribute name="dispatcher" enabled="1" auto_update="1">
+                            <sink id="55"/>
+                        </attribute>
+                    </component_node>
+                    <component_node component_id="btDiscreteDynamicsWorld" disabled_count="0">
+                        <attribute name="broadphase" enabled="1" auto_update="1" sink_id="51"/>
+                        <attribute name="collisionConfiguration" enabled="1" auto_update="1" sink_id="52"/>
+                        <attribute name="collisionObjects" enabled="1" auto_update="1" sink_id="56"/>
+                        <attribute name="collisionWorld" enabled="1" auto_update="1"/>
+                        <attribute name="constraintSolver" enabled="1" auto_update="1" sink_id="54"/>
+                        <attribute name="discreteDynamicsWorld" enabled="1" auto_update="1"/>
+                        <attribute name="dispatcher" enabled="1" auto_update="1" sink_id="55"/>
+                        <attribute name="dynamicsWorld" enabled="1" auto_update="1">
+                            <sink id="57"/>
+                        </attribute>
+                        <attribute name="gravity" enabled="1" auto_update="1" sink_id="58">
+                            <value>0 -9.82 0</value>
+                        </attribute>
+                        <attribute name="performDiscreteCollisionDetection" enabled="1" auto_update="1" sink_id="59"/>
+                        <attribute name="rigidBodies" enabled="1" auto_update="1" sink_id="60"/>
+                        <attribute name="simulateStep" enabled="1" auto_update="0" sink_id="3"/>
+                        <attribute name="timeStep" enabled="1" auto_update="1" sink_id="61">
+                            <value>0.01667</value>
+                        </attribute>
+                    </component_node>
+                    <component_node component_id="btDebugDrawRouter" disabled_count="0">
+                        <attribute name="draw" enabled="1" auto_update="1" sink_id="29"/>
+                        <attribute name="drawAabb" enabled="1" auto_update="1" sink_id="62">
+                            <value>1</value>
+                        </attribute>
+                        <attribute name="drawConstraintLimits" enabled="1" auto_update="1" sink_id="63">
+                            <value>1</value>
+                        </attribute>
+                        <attribute name="drawConstraints" enabled="1" auto_update="1" sink_id="64">
+                            <value>1</value>
+                        </attribute>
+                        <attribute name="drawContactPoints" enabled="1" auto_update="1" sink_id="65">
+                            <value>1</value>
+                        </attribute>
+                        <attribute name="drawWireframe" enabled="1" auto_update="1" sink_id="66">
+                            <value>1</value>
+                        </attribute>
+                        <attribute name="drawer" enabled="1" auto_update="1" sink_id="37"/>
+                        <attribute name="noDeactivation" enabled="1" auto_update="1" sink_id="67">
+                            <value>1</value>
+                        </attribute>
+                        <attribute name="world" enabled="1" auto_update="1" sink_id="57"/>
+                    </component_node>
+                </composite_node>
+                <composite_node name="objects" disabled_count="0">
+                    <composite_node name="slope1" disabled_count="0">
+                        <component_node component_id="btBoxShape" name="shape" disabled_count="0">
+                            <attribute name="collisionShape" enabled="1" auto_update="1">
+                                <sink id="68"/>
+                            </attribute>
+                            <attribute name="halfExtents" enabled="1" auto_update="1" sink_id="69">
+                                <value>10 0.5 10</value>
+                            </attribute>
+                            <attribute name="localScaling" enabled="1" auto_update="1" sink_id="70">
+                                <value>1 1 1</value>
+                            </attribute>
+                            <attribute name="margin" enabled="1" auto_update="1" sink_id="71">
+                                <value>0.04</value>
+                            </attribute>
+                        </component_node>
+                        <component_node component_id="btRigidBody" name="body" disabled_count="0">
+                            <attribute name="angularVelocity" enabled="1" auto_update="1" sink_id="72">
+                                <value>0 0 0</value>
+                            </attribute>
+                            <attribute name="applyCentralForce" enabled="1" auto_update="1" sink_id="73"/>
+                            <attribute name="applyCentralImpulse" enabled="1" auto_update="1" sink_id="74"/>
+                            <attribute name="applyTorque" enabled="1" auto_update="1" sink_id="75"/>
+                            <attribute name="applyTorqueImpulse" enabled="1" auto_update="1" sink_id="76"/>
+                            <attribute name="collisionObject" enabled="1" auto_update="1"/>
+                            <attribute name="collisionShape" enabled="1" auto_update="1" sink_id="68"/>
+                            <attribute name="friction" enabled="1" auto_update="1" sink_id="77">
+                                <value>10</value>
+                            </attribute>
+                            <attribute name="inertia" enabled="1" auto_update="1" sink_id="78">
+                                <value>0 0 0</value>
+                            </attribute>
+                            <attribute name="linearVelocity" enabled="1" auto_update="1" sink_id="79">
+                                <value>0 0 0</value>
+                            </attribute>
+                            <attribute name="mass" enabled="1" auto_update="1" sink_id="80">
+                                <value>0</value>
+                            </attribute>
+                            <attribute name="origin" enabled="1" auto_update="1" sink_id="81">
+                                <value>-10 -0.5 0</value>
+                            </attribute>
+                            <attribute name="restitution" enabled="1" auto_update="1" sink_id="82">
+                                <value>0</value>
+                            </attribute>
+                            <attribute name="rigidBody" enabled="1" auto_update="1">
+                                <sink id="60"/>
+                            </attribute>
+                            <attribute name="rotation" enabled="1" auto_update="1" sink_id="83">
+                                <value>0 0 -0.0436194 0.999048</value>
+                            </attribute>
+                            <attribute name="rotationEulerYPR" enabled="1" auto_update="1" sink_id="84">
+                                <value>-5 0 0</value>
+                            </attribute>
+                            <attribute name="rotationEulerZYX" enabled="1" auto_update="1" sink_id="85">
+                                <value>0 0 -5</value>
+                            </attribute>
+                        </component_node>
+                    </composite_node>
+                    <composite_node name="slope2" disabled_count="0">
+                        <component_node component_id="btBoxShape" name="shape" disabled_count="0">
+                            <attribute name="collisionShape" enabled="1" auto_update="1">
+                                <sink id="86"/>
+                            </attribute>
+                            <attribute name="halfExtents" enabled="1" auto_update="1" sink_id="87">
+                                <value>10 0.5 10</value>
+                            </attribute>
+                            <attribute name="localScaling" enabled="1" auto_update="1" sink_id="88">
+                                <value>1 1 1</value>
+                            </attribute>
+                            <attribute name="margin" enabled="1" auto_update="1" sink_id="89">
+                                <value>0.04</value>
+                            </attribute>
+                        </component_node>
+                        <component_node component_id="btRigidBody" name="body" disabled_count="0">
+                            <attribute name="angularVelocity" enabled="1" auto_update="1" sink_id="90">
+                                <value>0 0 0</value>
+                            </attribute>
+                            <attribute name="applyCentralForce" enabled="1" auto_update="1" sink_id="91"/>
+                            <attribute name="applyCentralImpulse" enabled="1" auto_update="1" sink_id="92"/>
+                            <attribute name="applyTorque" enabled="1" auto_update="1" sink_id="93"/>
+                            <attribute name="applyTorqueImpulse" enabled="1" auto_update="1" sink_id="94"/>
+                            <attribute name="collisionObject" enabled="1" auto_update="1"/>
+                            <attribute name="collisionShape" enabled="1" auto_update="1" sink_id="86"/>
+                            <attribute name="friction" enabled="1" auto_update="1" sink_id="95">
+                                <value>10</value>
+                            </attribute>
+                            <attribute name="inertia" enabled="1" auto_update="1" sink_id="96">
+                                <value>0 0 0</value>
+                            </attribute>
+                            <attribute name="linearVelocity" enabled="1" auto_update="1" sink_id="97">
+                                <value>0 0 0</value>
+                            </attribute>
+                            <attribute name="mass" enabled="1" auto_update="1" sink_id="98">
+                                <value>0</value>
+                            </attribute>
+                            <attribute name="origin" enabled="1" auto_update="1" sink_id="99">
+                                <value>10 -0.5 0</value>
+                            </attribute>
+                            <attribute name="restitution" enabled="1" auto_update="1" sink_id="100">
+                                <value>0</value>
+                            </attribute>
+                            <attribute name="rigidBody" enabled="1" auto_update="1">
+                                <sink id="60"/>
+                            </attribute>
+                            <attribute name="rotation" enabled="1" auto_update="1" sink_id="101">
+                                <value>0 0 0.0436194 0.999048</value>
+                            </attribute>
+                            <attribute name="rotationEulerYPR" enabled="1" auto_update="1" sink_id="102">
+                                <value>5 0 0</value>
+                            </attribute>
+                            <attribute name="rotationEulerZYX" enabled="1" auto_update="1" sink_id="103">
+                                <value>0 0 5</value>
+                            </attribute>
+                        </component_node>
+                    </composite_node>
+                    <composite_node name="side1" disabled_count="0">
+                        <component_node component_id="btBoxShape" name="shape" disabled_count="0">
+                            <attribute name="collisionShape" enabled="1" auto_update="1">
+                                <sink id="104"/>
+                            </attribute>
+                            <attribute name="halfExtents" enabled="1" auto_update="1" sink_id="105">
+                                <value>20 2 0.5</value>
+                            </attribute>
+                            <attribute name="localScaling" enabled="1" auto_update="1" sink_id="106">
+                                <value>1 1 1</value>
+                            </attribute>
+                            <attribute name="margin" enabled="1" auto_update="1" sink_id="107">
+                                <value>0.04</value>
+                            </attribute>
+                        </component_node>
+                        <component_node component_id="btRigidBody" name="body" disabled_count="0">
+                            <attribute name="angularVelocity" enabled="1" auto_update="1" sink_id="108">
+                                <value>0 0 0</value>
+                            </attribute>
+                            <attribute name="applyCentralForce" enabled="1" auto_update="1" sink_id="109"/>
+                            <attribute name="applyCentralImpulse" enabled="1" auto_update="1" sink_id="110"/>
+                            <attribute name="applyTorque" enabled="1" auto_update="1" sink_id="111"/>
+                            <attribute name="applyTorqueImpulse" enabled="1" auto_update="1" sink_id="112"/>
+                            <attribute name="collisionObject" enabled="1" auto_update="1"/>
+                            <attribute name="collisionShape" enabled="1" auto_update="1" sink_id="104"/>
+                            <attribute name="friction" enabled="1" auto_update="1" sink_id="113">
+                                <value>10</value>
+                            </attribute>
+                            <attribute name="inertia" enabled="1" auto_update="1" sink_id="114">
+                                <value>0 0 0</value>
+                            </attribute>
+                            <attribute name="linearVelocity" enabled="1" auto_update="1" sink_id="115">
+                                <value>0 0 0</value>
+                            </attribute>
+                            <attribute name="mass" enabled="1" auto_update="1" sink_id="116">
+                                <value>0</value>
+                            </attribute>
+                            <attribute name="origin" enabled="1" auto_update="1" sink_id="117">
+                                <value>0 0 10.5</value>
+                            </attribute>
+                            <attribute name="restitution" enabled="1" auto_update="1" sink_id="118">
+                                <value>0</value>
+                            </attribute>
+                            <attribute name="rigidBody" enabled="1" auto_update="1">
+                                <sink id="60"/>
+                            </attribute>
+                            <attribute name="rotation" enabled="1" auto_update="1" sink_id="119">
+                                <value>0 0 0 1</value>
+                            </attribute>
+                            <attribute name="rotationEulerYPR" enabled="1" auto_update="1" sink_id="120">
+                                <value>0 0 0</value>
+                            </attribute>
+                            <attribute name="rotationEulerZYX" enabled="1" auto_update="1" sink_id="121">
+                                <value>0 0 0</value>
+                            </attribute>
+                        </component_node>
+                    </composite_node>
+                    <composite_node name="side2" disabled_count="0">
+                        <component_node component_id="btBoxShape" name="shape" disabled_count="0">
+                            <attribute name="collisionShape" enabled="1" auto_update="1">
+                                <sink id="122"/>
+                            </attribute>
+                            <attribute name="halfExtents" enabled="1" auto_update="1" sink_id="123">
+                                <value>20 2 0.5</value>
+                            </attribute>
+                            <attribute name="localScaling" enabled="1" auto_update="1" sink_id="124">
+                                <value>1 1 1</value>
+                            </attribute>
+                            <attribute name="margin" enabled="1" auto_update="1" sink_id="125">
+                                <value>0.04</value>
+                            </attribute>
+                        </component_node>
+                        <component_node component_id="btRigidBody" name="body" disabled_count="0">
+                            <attribute name="angularVelocity" enabled="1" auto_update="1" sink_id="126">
+                                <value>0 0 0</value>
+                            </attribute>
+                            <attribute name="applyCentralForce" enabled="1" auto_update="1" sink_id="127"/>
+                            <attribute name="applyCentralImpulse" enabled="1" auto_update="1" sink_id="128"/>
+                            <attribute name="applyTorque" enabled="1" auto_update="1" sink_id="129"/>
+                            <attribute name="applyTorqueImpulse" enabled="1" auto_update="1" sink_id="130"/>
+                            <attribute name="collisionObject" enabled="1" auto_update="1"/>
+                            <attribute name="collisionShape" enabled="1" auto_update="1" sink_id="122"/>
+                            <attribute name="friction" enabled="1" auto_update="1" sink_id="131">
+                                <value>10</value>
+                            </attribute>
+                            <attribute name="inertia" enabled="1" auto_update="1" sink_id="132">
+                                <value>0 0 0</value>
+                            </attribute>
+                            <attribute name="linearVelocity" enabled="1" auto_update="1" sink_id="133">
+                                <value>0 0 0</value>
+                            </attribute>
+                            <attribute name="mass" enabled="1" auto_update="1" sink_id="134">
+                                <value>0</value>
+                            </attribute>
+                            <attribute name="origin" enabled="1" auto_update="1" sink_id="135">
+                                <value>0 0 -10.5</value>
+                            </attribute>
+                            <attribute name="restitution" enabled="1" auto_update="1" sink_id="136">
+                                <value>0</value>
+                            </attribute>
+                            <attribute name="rigidBody" enabled="1" auto_update="1">
+                                <sink id="60"/>
+                            </attribute>
+                            <attribute name="rotation" enabled="1" auto_update="1" sink_id="137">
+                                <value>0 0 0 1</value>
+                            </attribute>
+                            <attribute name="rotationEulerYPR" enabled="1" auto_update="1" sink_id="138">
+                                <value>0 0 0</value>
+                            </attribute>
+                            <attribute name="rotationEulerZYX" enabled="1" auto_update="1" sink_id="139">
+                                <value>0 0 0</value>
+                            </attribute>
+                        </component_node>
+                    </composite_node>
+                    <composite_node name="box1" disabled_count="0">
+                        <component_node component_id="btVector3" name="initial position" disabled_count="0">
+                            <attribute name="data" enabled="1" auto_update="1" sink_id="140">
+                                <value>10 10 0</value>
+                                <sink id="141"/>
+                            </attribute>
+                        </component_node>
+                        <component_node component_id="btQuaternion" name="initial rotation" disabled_count="0">
+                            <attribute name="data" enabled="1" auto_update="1" sink_id="142">
+                                <value>0 0 0 1</value>
+                                <sink id="143"/>
+                            </attribute>
+                        </component_node>
+                        <component_node component_id="btVector3" name="initial velocity" disabled_count="0">
+                            <attribute name="data" enabled="1" auto_update="1" sink_id="144">
+                                <value>0 0 0</value>
+                                <sink id="145"/>
+                            </attribute>
+                        </component_node>
+                        <component_node component_id="btVector3" name="initial rotation velocity" disabled_count="0">
+                            <attribute name="data" enabled="1" auto_update="1" sink_id="146">
+                                <value>0 0 0</value>
+                                <sink id="147"/>
+                            </attribute>
+                        </component_node>
+                        <component_node component_id="btBoxShape" name="shape" disabled_count="0">
+                            <attribute name="collisionShape" enabled="1" auto_update="1">
+                                <sink id="148"/>
+                            </attribute>
+                            <attribute name="halfExtents" enabled="1" auto_update="1" sink_id="149">
+                                <value>0.5 0.5 0.5</value>
+                            </attribute>
+                            <attribute name="localScaling" enabled="1" auto_update="1" sink_id="150">
+                                <value>1 1 1</value>
+                            </attribute>
+                            <attribute name="margin" enabled="1" auto_update="1" sink_id="151">
+                                <value>0.04</value>
+                            </attribute>
+                        </component_node>
+                        <component_node component_id="btRigidBody" name="body" disabled_count="0">
+                            <attribute name="angularVelocity" enabled="1" auto_update="1" sink_id="147"/>
+                            <attribute name="applyCentralForce" enabled="1" auto_update="1" sink_id="152"/>
+                            <attribute name="applyCentralImpulse" enabled="1" auto_update="1" sink_id="153"/>
+                            <attribute name="applyTorque" enabled="1" auto_update="1" sink_id="154"/>
+                            <attribute name="applyTorqueImpulse" enabled="1" auto_update="1" sink_id="155"/>
+                            <attribute name="collisionObject" enabled="1" auto_update="1"/>
+                            <attribute name="collisionShape" enabled="1" auto_update="1" sink_id="148"/>
+                            <attribute name="friction" enabled="1" auto_update="1" sink_id="156">
+                                <value>0.5</value>
+                            </attribute>
+                            <attribute name="inertia" enabled="1" auto_update="1" sink_id="157">
+                                <value>1 1 1</value>
+                            </attribute>
+                            <attribute name="linearVelocity" enabled="1" auto_update="1" sink_id="145"/>
+                            <attribute name="mass" enabled="1" auto_update="1" sink_id="158">
+                                <value>10</value>
+                            </attribute>
+                            <attribute name="origin" enabled="1" auto_update="1" sink_id="141"/>
+                            <attribute name="restitution" enabled="1" auto_update="1" sink_id="159">
+                                <value>0</value>
+                            </attribute>
+                            <attribute name="rigidBody" enabled="1" auto_update="1">
+                                <sink id="60"/>
+                            </attribute>
+                            <attribute name="rotation" enabled="1" auto_update="1" sink_id="143"/>
+                            <attribute name="rotationEulerYPR" enabled="1" auto_update="1" sink_id="160">
+                                <value>-174.997 -0.215117 7.3621e-005</value>
+                            </attribute>
+                            <attribute name="rotationEulerZYX" enabled="1" auto_update="1" sink_id="161">
+                                <value>7.3621e-005 -0.215117 -174.997</value>
+                            </attribute>
+                        </component_node>
+                    </composite_node>
+                    <composite_node name="sphere1" disabled_count="0">
+                        <component_node component_id="btVector3" name="initial position" disabled_count="0">
+                            <attribute name="data" enabled="1" auto_update="1" sink_id="162">
+                                <value>-10 10 0</value>
+                                <sink id="163"/>
+                            </attribute>
+                        </component_node>
+                        <component_node component_id="btQuaternion" name="initial rotation" disabled_count="0">
+                            <attribute name="data" enabled="1" auto_update="1" sink_id="164">
+                                <value>0 0 0 1</value>
+                                <sink id="165"/>
+                            </attribute>
+                        </component_node>
+                        <component_node component_id="btVector3" name="initial velocity" disabled_count="0">
+                            <attribute name="data" enabled="1" auto_update="1" sink_id="166">
+                                <value>0 0 0</value>
+                                <sink id="167"/>
+                            </attribute>
+                        </component_node>
+                        <component_node component_id="btVector3" name="initial rotation velocity" disabled_count="0">
+                            <attribute name="data" enabled="1" auto_update="1" sink_id="168">
+                                <value>0 0 0</value>
+                                <sink id="169"/>
+                            </attribute>
+                        </component_node>
+                        <component_node component_id="btSphereShape" name="shape" disabled_count="0">
+                            <attribute name="collisionShape" enabled="1" auto_update="1">
+                                <sink id="170"/>
+                            </attribute>
+                            <attribute name="localScaling" enabled="1" auto_update="1" sink_id="171">
+                                <value>1 1 1</value>
+                            </attribute>
+                            <attribute name="margin" enabled="1" auto_update="1" sink_id="172">
+                                <value>0.5</value>
+                            </attribute>
+                            <attribute name="radius" enabled="1" auto_update="1" sink_id="173">
+                                <value>0.5</value>
+                            </attribute>
+                        </component_node>
+                        <component_node component_id="btRigidBody" name="body" disabled_count="0">
+                            <attribute name="angularVelocity" enabled="1" auto_update="1" sink_id="169"/>
+                            <attribute name="applyCentralForce" enabled="1" auto_update="1" sink_id="174"/>
+                            <attribute name="applyCentralImpulse" enabled="1" auto_update="1" sink_id="175"/>
+                            <attribute name="applyTorque" enabled="1" auto_update="1" sink_id="176"/>
+                            <attribute name="applyTorqueImpulse" enabled="1" auto_update="1" sink_id="177"/>
+                            <attribute name="collisionObject" enabled="1" auto_update="1"/>
+                            <attribute name="collisionShape" enabled="1" auto_update="1" sink_id="170"/>
+                            <attribute name="friction" enabled="1" auto_update="1" sink_id="178">
+                                <value>10</value>
+                            </attribute>
+                            <attribute name="inertia" enabled="1" auto_update="1" sink_id="179">
+                                <value>1 1 1</value>
+                            </attribute>
+                            <attribute name="linearVelocity" enabled="1" auto_update="1" sink_id="167"/>
+                            <attribute name="mass" enabled="1" auto_update="1" sink_id="180">
+                                <value>10</value>
+                            </attribute>
+                            <attribute name="origin" enabled="1" auto_update="1" sink_id="163"/>
+                            <attribute name="restitution" enabled="1" auto_update="1" sink_id="181">
+                                <value>0</value>
+                            </attribute>
+                            <attribute name="rigidBody" enabled="1" auto_update="1">
+                                <sink id="60"/>
+                            </attribute>
+                            <attribute name="rotation" enabled="1" auto_update="1" sink_id="165"/>
+                            <attribute name="rotationEulerYPR" enabled="1" auto_update="1" sink_id="182">
+                                <value>130.925 0.0944865 0.449693</value>
+                            </attribute>
+                            <attribute name="rotationEulerZYX" enabled="1" auto_update="1" sink_id="183">
+                                <value>0.449693 0.0944865 130.925</value>
+                            </attribute>
+                        </component_node>
+                    </composite_node>
+                </composite_node>
+            </composite_node>
+        </composite_node>
+    </system>
+</coca_xml>

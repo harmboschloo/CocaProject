@@ -1,0 +1,2 @@
+url: https://svn.sourceforge.net/svnroot/irrlicht/trunk
+revision: 2422

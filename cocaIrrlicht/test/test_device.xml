@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coca_xml version="2">
+    <system>
+        <description>
+            Hello cocaIrrlicht!
+            By H.W. Boschloo
+        </description>
+        <composite_node name="Root" disabled_count="0">
+            <component_node component_id="uTimer" name="timer" disabled_count="0">
+                <attribute name="realTime" enabled="1" auto_update="1" sink_id="0">
+                    <value>0</value>
+                </attribute>
+                <attribute name="run" enabled="1" auto_update="1">
+                    <sink id="1"/>
+                    <sink id="2"/>
+                </attribute>
+                <attribute name="runTime" enabled="1" auto_update="1"/>
+                <attribute name="runTimeDifference" enabled="1" auto_update="1"/>
+                <attribute name="targetTime" enabled="1" auto_update="1"/>
+                <attribute name="targetTimeDelay" enabled="1" auto_update="1" sink_id="3">
+                    <value>0.01</value>
+                </attribute>
+            </component_node>
+            <component_node component_id="uFrameRateRecorder" name="frame rate recorder" disabled_count="0">
+                <attribute name="frameRate" enabled="1" auto_update="1">
+                    <sink id="4"/>
+                </attribute>
+                <attribute name="recordFrame" enabled="1" auto_update="1" sink_id="2"/>
+                <attribute name="recordTime" enabled="1" auto_update="1" sink_id="5">
+                    <value>1</value>
+                </attribute>
+            </component_node>
+            <component_node component_id="uFloat32ToString" disabled_count="0">
+                <attribute name="data" enabled="1" auto_update="1" sink_id="4"/>
+                <attribute name="string" enabled="1" auto_update="1">
+                    <sink id="6"/>
+                </attribute>
+            </component_node>
+            <component_node component_id="uLogString" disabled_count="1">
+                <attribute name="prefix" enabled="1" auto_update="1" sink_id="7">
+                    <value>Recorded frame rate: </value>
+                </attribute>
+                <attribute name="string" enabled="1" auto_update="1" sink_id="6"/>
+                <attribute name="suffix" enabled="1" auto_update="1" sink_id="8">
+                    <value> (FPS)</value>
+                </attribute>
+            </component_node>
+            <component_node component_id="irrDevice" name="3d device" disabled_count="0">
+                <attribute name="bits" enabled="1" auto_update="1" sink_id="9">
+                    <value>16</value>
+                </attribute>
+                <attribute name="device" enabled="1" auto_update="1">
+                    <sink id="10"/>
+                    <sink id="11"/>
+                    <sink id="12"/>
+                </attribute>
+                <attribute name="driver" enabled="1" auto_update="1" sink_id="13">
+                    <value>5</value>
+                </attribute>
+                <attribute name="fullscreen" enabled="1" auto_update="1" sink_id="14">
+                    <value>0</value>
+                </attribute>
+                <attribute name="run" enabled="1" auto_update="0" sink_id="1">
+                    <sink id="15"/>
+                </attribute>
+                <attribute name="size" enabled="1" auto_update="1" sink_id="16">
+                    <value>800 600</value>
+                </attribute>
+                <attribute name="stencilBuffer" enabled="1" auto_update="1" sink_id="17">
+                    <value>0</value>
+                </attribute>
+                <attribute name="vsync" enabled="1" auto_update="1" sink_id="18">
+                    <value>1</value>
+                </attribute>
+                <attribute name="windowActive" enabled="1" auto_update="1">
+                    <sink id="19"/>
+                </attribute>
+            </component_node>
+            <component_node component_id="irrWindowCaption" name="window caption" disabled_count="0">
+                <attribute name="caption" enabled="1" auto_update="1" sink_id="20">
+                    <value>Hello World!</value>
+                </attribute>
+                <attribute name="device" enabled="1" auto_update="1" sink_id="12"/>
+                <attribute name="showDriver" enabled="1" auto_update="1" sink_id="21">
+                    <value>1</value>
+                </attribute>
+                <attribute name="showFps" enabled="1" auto_update="1" sink_id="22">
+                    <value>1</value>
+                </attribute>
+                <attribute name="update" enabled="1" auto_update="1" sink_id="23"/>
+            </component_node>
+            <component_node component_id="irrVideoDriver" name="video driver" disabled_count="0">
+                <attribute name="bg" enabled="1" auto_update="1" sink_id="24">
+                    <value>255 0 100 150</value>
+                </attribute>
+                <attribute name="clearBackBuffer" enabled="1" auto_update="1" sink_id="25">
+                    <value>1</value>
+                </attribute>
+                <attribute name="clearZBuffer" enabled="1" auto_update="1" sink_id="26">
+                    <value>1</value>
+                </attribute>
+                <attribute name="device" enabled="1" auto_update="1" sink_id="10"/>
+                <attribute name="draw" enabled="1" auto_update="1">
+                    <sink id="27"/>
+                </attribute>
+                <attribute name="driver" enabled="1" auto_update="1"/>
+                <attribute name="postDraw" enabled="1" auto_update="1">
+                    <sink id="23"/>
+                </attribute>
+                <attribute name="preDraw" enabled="1" auto_update="1"/>
+                <attribute name="run" enabled="1" auto_update="1" sink_id="15"/>
+            </component_node>
+            <component_node component_id="irrSceneManager" name="scene manager" disabled_count="0">
+                <attribute name="device" enabled="1" auto_update="1" sink_id="11"/>
+                <attribute name="draw" enabled="1" auto_update="1" sink_id="27"/>
+                <attribute name="manager" enabled="1" auto_update="1"/>
+                <attribute name="root" enabled="1" auto_update="1">
+                    <sink id="28"/>
+                    <sink id="29"/>
+                </attribute>
+            </component_node>
+            <component_node component_id="irrAxisSystemSceneNode" name="axis system" disabled_count="0">
+                <attribute name="parent" enabled="1" auto_update="1" sink_id="28"/>
+                <attribute name="position" enabled="1" auto_update="1" sink_id="30">
+                    <value>0 0 0</value>
+                </attribute>
+                <attribute name="rotation" enabled="1" auto_update="1" sink_id="31">
+                    <value>0 0 0</value>
+                </attribute>
+                <attribute name="scale" enabled="1" auto_update="1" sink_id="32">
+                    <value>1 1 2</value>
+                </attribute>
+                <attribute name="visible" enabled="1" auto_update="1" sink_id="33">
+                    <value>1</value>
+                </attribute>
+            </component_node>
+            <component_node component_id="irrVector3df" name="position" disabled_count="0">
+                <attribute name="data" enabled="1" auto_update="1" sink_id="34">
+                    <value>6 12 2.5</value>
+                    <sink id="35"/>
+                </attribute>
+            </component_node>
+            <component_node component_id="irrVector3df" name="dummy rotation" disabled_count="0">
+                <attribute name="data" enabled="1" auto_update="1" sink_id="36">
+                    <value>0 0 0</value>
+                    <sink id="37"/>
+                </attribute>
+            </component_node>
+            <component_node component_id="irrCameraSceneNodeFPS" name="camera" disabled_count="0">
+                <attribute name="aspectRatio" enabled="1" auto_update="1" sink_id="38">
+                    <value>1.33333</value>
+                </attribute>
+                <attribute name="bindTargetAndRotation" enabled="1" auto_update="1" sink_id="39">
+                    <value>1</value>
+                </attribute>
+                <attribute name="camera" enabled="1" auto_update="1"/>
+                <attribute name="farClipPlane" enabled="1" auto_update="1" sink_id="40">
+                    <value>2000</value>
+                </attribute>
+                <attribute name="fov" enabled="1" auto_update="1" sink_id="41">
+                    <value>1.25664</value>
+                </attribute>
+                <attribute name="inputReceiverEnabled" enabled="1" auto_update="1" sink_id="19"/>
+                <attribute name="moveSpeed" enabled="1" auto_update="1" sink_id="42">
+                    <value>0.02</value>
+                </attribute>
+                <attribute name="nearClipPlane" enabled="1" auto_update="1" sink_id="43">
+                    <value>1</value>
+                </attribute>
+                <attribute name="node" enabled="1" auto_update="1"/>
+                <attribute name="parent" enabled="1" auto_update="1" sink_id="29"/>
+                <attribute name="position" enabled="1" auto_update="1" sink_id="35"/>
+                <attribute name="rotation" enabled="1" auto_update="1" sink_id="37"/>
+                <attribute name="rotationSpeed" enabled="1" auto_update="1" sink_id="44">
+                    <value>100</value>
+                </attribute>
+                <attribute name="scale" enabled="1" auto_update="1" sink_id="45">
+                    <value>1 1 1</value>
+                </attribute>
+                <attribute name="target" enabled="1" auto_update="1" sink_id="46">
+                    <value>-4.98439 3.90123 2.44502</value>
+                </attribute>
+                <attribute name="upVector" enabled="1" auto_update="1" sink_id="47">
+                    <value>0 1 0</value>
+                </attribute>
+                <attribute name="visible" enabled="1" auto_update="1" sink_id="48">
+                    <value>1</value>
+                </attribute>
+            </component_node>
+        </composite_node>
+    </system>
+</coca_xml>

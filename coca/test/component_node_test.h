@@ -1,0 +1,9 @@
+// Copyright (C) 2008-2009 Harm Boschloo
+
+#ifndef COCA_COMPONENT_NODE_TEST_H_INCLUDED
+#define COCA_COMPONENT_NODE_TEST_H_INCLUDED
+
+void testComponentNode();
+
+#endif // COCA_COMPONENT_NODE_TEST_H_INCLUDED
+

@@ -1,0 +1,8 @@
+dofile( "scripts/coca.lua" )
+dofile( "scripts/premake.lua" )
+dofile( "scripts/repeat.lua" )
+dofile( "scripts/header_footer.lua" )
+dofile( "scripts/algorithm_files.lua" )
+dofile( "scripts/function_files.lua" )
+dofile( "scripts/test.lua" )
+dofile( "scripts/actions.lua" )

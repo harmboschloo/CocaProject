@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coca_xml version="2">
+    <system>
+        <description>
+            Hello cocaUtils!
+            By H.W. Boschloo
+        </description>
+        <composite_node name="Root" disabled_count="0">
+            <component_node component_id="uConstantUnsignedInt32" disabled_count="0">
+                <attribute name="data" enabled="1" auto_update="1" sink_id="0">
+                    <value>0</value>
+                </attribute>
+            </component_node>
+            <component_node component_id="uConstantFloat32" name="target time delay" disabled_count="0">
+                <attribute name="data" enabled="1" auto_update="1" sink_id="1">
+                    <value>0.005</value>
+                    <sink id="2"/>
+                </attribute>
+            </component_node>
+            <component_node component_id="uTimer" name="Clock1" disabled_count="0">
+                <attribute name="realTime" enabled="1" auto_update="1" sink_id="3">
+                    <value>1</value>
+                </attribute>
+                <attribute name="run" enabled="1" auto_update="1">
+                    <sink id="4"/>
+                </attribute>
+                <attribute name="runTime" enabled="1" auto_update="1"/>
+                <attribute name="runTimeDifference" enabled="1" auto_update="1"/>
+                <attribute name="targetTime" enabled="1" auto_update="1"/>
+                <attribute name="targetTimeDelay" enabled="1" auto_update="1" sink_id="2"/>
+            </component_node>
+            <component_node component_id="uFrameRateRecorder" name="Recorder1" disabled_count="0">
+                <attribute name="frameRate" enabled="1" auto_update="1">
+                    <sink id="5"/>
+                </attribute>
+                <attribute name="recordFrame" enabled="1" auto_update="1" sink_id="4"/>
+                <attribute name="recordTime" enabled="1" auto_update="1" sink_id="6">
+                    <value>1</value>
+                </attribute>
+            </component_node>
+            <component_node component_id="uFloat32ToString" disabled_count="0">
+                <attribute name="data" enabled="1" auto_update="1" sink_id="5"/>
+                <attribute name="string" enabled="1" auto_update="1">
+                    <sink id="7"/>
+                </attribute>
+            </component_node>
+            <component_node component_id="uLogString" disabled_count="0">
+                <attribute name="prefix" enabled="1" auto_update="1" sink_id="8">
+                    <value>Recorded frame rate: </value>
+                </attribute>
+                <attribute name="string" enabled="1" auto_update="1" sink_id="7"/>
+                <attribute name="suffix" enabled="1" auto_update="1" sink_id="9">
+                    <value> (FPS)</value>
+                </attribute>
+            </component_node>
+        </composite_node>
+    </system>
+</coca_xml>

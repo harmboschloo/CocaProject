@@ -1,0 +1,1 @@
+Copy interface header files that allow other plugins to communicate with your plugin into this directoy. 

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coca_xml version="2">
+    <system>
+        <description>
+            Hello cocaExamplePlugin!
+            By H.W. Boschloo
+        </description>
+        <composite_node name="Root" disabled_count="0">
+            <component_node component_id="exampleComponent" disabled_count="0">
+                <attribute name="input" enabled="1" auto_update="1" sink_id="0"/>
+                <attribute name="output" enabled="1" auto_update="1"/>
+                <attribute name="setting" enabled="1" auto_update="1" sink_id="1">
+                    <value>0</value>
+                </attribute>
+            </component_node>
+        </composite_node>
+    </system>
+</coca_xml>

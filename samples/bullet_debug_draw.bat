@@ -1,0 +1,1 @@
+call "%COCA_LOCATION%\run" "bullet_debug_draw.xml" -w -c

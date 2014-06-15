@@ -1,0 +1,6 @@
+#ifndef XML_VERSION_H_INCLUDED
+#define XML_VERSION_H_INCLUDED
+
+const int XML_VERSION = 2;
+
+#endif // XML_VERSION_H_INCLUDED

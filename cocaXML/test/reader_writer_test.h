@@ -1,0 +1,6 @@
+#ifndef READER_WRITER_TEST_H_INCLUDED
+#define READER_WRITER_TEST_H_INCLUDED
+
+void testReaderWriter();
+
+#endif //READER_WRITER_TEST_H_INCLUDED

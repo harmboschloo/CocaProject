@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="all_projects">
+		<Project filename="..\..\coca\build\codeblocks\coca.cbp" />
+		<Project filename="..\..\cocaRunner\build\codeblocks\cocaRun.cbp">
+			<Depends filename="..\..\coca\build\codeblocks\coca.cbp" />
+		</Project>
+		<Project filename="..\..\cocaXML\build\codeblocks\cocaXML.cbp">
+			<Depends filename="..\..\coca\build\codeblocks\coca.cbp" />
+		</Project>
+		<Project filename="..\..\cocaUtils\build\codeblocks\cocaUtils.cbp">
+			<Depends filename="..\..\coca\build\codeblocks\coca.cbp" />
+		</Project>
+		<Project filename="..\..\cocaBullet\build\codeblocks\bullet.cbp" />
+		<Project filename="..\..\cocaBullet\build\codeblocks\cocaBullet.cbp">
+			<Depends filename="..\..\coca\build\codeblocks\coca.cbp" />
+			<Depends filename="..\..\cocaBullet\build\codeblocks\bullet.cbp" />
+		</Project>
+		<Project filename="..\..\cocaIrrlicht\build\codeblocks\irrlicht_3rdparty.cbp" />
+		<Project filename="..\..\cocaIrrlicht\build\codeblocks\irrlicht.cbp">
+			<Depends filename="..\..\cocaIrrlicht\build\codeblocks\irrlicht_3rdparty.cbp" />
+		</Project>
+		<Project filename="..\..\cocaIrrlicht\build\codeblocks\cocaIrrlicht.cbp">
+			<Depends filename="..\..\coca\build\codeblocks\coca.cbp" />
+			<Depends filename="..\..\cocaBullet\build\codeblocks\cocaBullet.cbp" />
+			<Depends filename="..\..\cocaIrrlicht\build\codeblocks\irrlicht.cbp" />
+		</Project>
+		<Project filename="..\..\cocaEditor\build\codeblocks\cocaEditor.cbp" active="1">
+			<Depends filename="..\..\coca\build\codeblocks\coca.cbp" />
+		</Project>
+	</Workspace>
+</CodeBlocks_workspace_file>

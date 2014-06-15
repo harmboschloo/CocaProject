@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coca_xml version="2">
+    <system>
+        <composite_node name="bla" disabled_count="0">
+            <composite_node name="test1" disabled_count="0">
+                <component_node component_id="uTimer" disabled_count="0">
+                    <attribute name="realTime" enabled="1" auto_update="1" sink_id="0">
+                        <value>0</value>
+                    </attribute>
+                    <attribute name="run" enabled="1" auto_update="1"/>
+                    <attribute name="runTime" enabled="1" auto_update="1"/>
+                    <attribute name="runTimeDifference" enabled="1" auto_update="1"/>
+                    <attribute name="targetTime" enabled="1" auto_update="1"/>
+                    <attribute name="targetTimeDelay" enabled="1" auto_update="1" sink_id="1">
+                        <value>0</value>
+                    </attribute>
+                </component_node>
+            </composite_node>
+            <composite_node name="test2" disabled_count="0">
+                <component_node component_id="uTimer" disabled_count="0">
+                    <attribute name="realTime" enabled="1" auto_update="1" sink_id="2">
+                        <value>0</value>
+                    </attribute>
+                    <attribute name="run" enabled="1" auto_update="1"/>
+                    <attribute name="runTime" enabled="1" auto_update="1"/>
+                    <attribute name="runTimeDifference" enabled="1" auto_update="1"/>
+                    <attribute name="targetTime" enabled="1" auto_update="1"/>
+                    <attribute name="targetTimeDelay" enabled="1" auto_update="1" sink_id="3">
+                        <value>0</value>
+                    </attribute>
+                </component_node>
+                <component_node component_id="irrVector3df" disabled_count="0">
+                    <attribute name="data" enabled="1" auto_update="1" sink_id="4">
+                        <value>0 0 0</value>
+                    </attribute>
+                </component_node>
+                <component_node component_id="irrWindowCaption" disabled_count="0">
+                    <attribute name="caption" enabled="1" auto_update="1" sink_id="5"/>
+                    <attribute name="device" enabled="1" auto_update="1" sink_id="6"/>
+                    <attribute name="showDriver" enabled="1" auto_update="1" sink_id="7">
+                        <value>0</value>
+                    </attribute>
+                    <attribute name="showFps" enabled="1" auto_update="1" sink_id="8">
+                        <value>0</value>
+                    </attribute>
+                    <attribute name="update" enabled="1" auto_update="1" sink_id="9"/>
+                </component_node>
+                <component_node component_id="uLogString" name="bla" disabled_count="0">
+                    <attribute name="prefix" enabled="1" auto_update="1" sink_id="10"/>
+                    <attribute name="string" enabled="1" auto_update="1" sink_id="11"/>
+                    <attribute name="suffix" enabled="1" auto_update="1" sink_id="12"/>
+                </component_node>
+                <component_node component_id="uConstantString" name="x" disabled_count="0">
+                    <attribute name="data" enabled="1" auto_update="1" sink_id="13">
+                        <sink id="10"/>
+                    </attribute>
+                </component_node>
+            </composite_node>
+            <component_node component_id="uTimer" disabled_count="0">
+                <attribute name="realTime" enabled="1" auto_update="1" sink_id="14">
+                    <value>0</value>
+                </attribute>
+                <attribute name="run" enabled="1" auto_update="1"/>
+                <attribute name="runTime" enabled="1" auto_update="1"/>
+                <attribute name="runTimeDifference" enabled="1" auto_update="1"/>
+                <attribute name="targetTime" enabled="1" auto_update="1"/>
+                <attribute name="targetTimeDelay" enabled="1" auto_update="1" sink_id="15">
+                    <value>0</value>
+                </attribute>
+            </component_node>
+        </composite_node>
+    </system>
+</coca_xml>

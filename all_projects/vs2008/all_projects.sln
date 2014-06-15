@@ -1,0 +1,89 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C++ Express 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "coca", "..\..\coca\build\vs2008\coca.vcproj", "{797F068B-7412-4F40-8CFC-3B9EB25F41CE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cocaEditor", "..\..\cocaEditor\build\vs2008\cocaEditor.vcproj", "{E16220CA-1092-724F-92B9-26600EB4D9B2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{797F068B-7412-4F40-8CFC-3B9EB25F41CE} = {797F068B-7412-4F40-8CFC-3B9EB25F41CE}
+		{51ABF89C-5195-CB40-82EA-7B2AC993B597} = {51ABF89C-5195-CB40-82EA-7B2AC993B597}
+		{F932BC98-9E41-1E43-B06F-5055FB296C2D} = {F932BC98-9E41-1E43-B06F-5055FB296C2D}
+		{8BAA22A9-A6D3-9240-B3D9-8DCF4B549D9D} = {8BAA22A9-A6D3-9240-B3D9-8DCF4B549D9D}
+		{930AE06E-94D4-9846-84C2-856BE2C515E8} = {930AE06E-94D4-9846-84C2-856BE2C515E8}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "irrlicht_3rdparty", "..\..\cocaIrrlicht\build\vs2008\irrlicht_3rdparty.vcproj", "{93ED348B-74FE-DA46-99CB-AD27CBABB774}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "irrlicht", "..\..\cocaIrrlicht\build\vs2008\irrlicht.vcproj", "{EBE32872-27FB-4446-B5A7-66B73162EC9B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{93ED348B-74FE-DA46-99CB-AD27CBABB774} = {93ED348B-74FE-DA46-99CB-AD27CBABB774}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cocaIrrlicht", "..\..\cocaIrrlicht\build\vs2008\cocaIrrlicht.vcproj", "{930AE06E-94D4-9846-84C2-856BE2C515E8}"
+	ProjectSection(ProjectDependencies) = postProject
+		{797F068B-7412-4F40-8CFC-3B9EB25F41CE} = {797F068B-7412-4F40-8CFC-3B9EB25F41CE}
+		{EBE32872-27FB-4446-B5A7-66B73162EC9B} = {EBE32872-27FB-4446-B5A7-66B73162EC9B}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cocaRunner", "..\..\cocaRunner\build\vs2008\cocaRun.vcproj", "{691C2685-FC8A-9944-8D0E-DB45D09CA37A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{797F068B-7412-4F40-8CFC-3B9EB25F41CE} = {797F068B-7412-4F40-8CFC-3B9EB25F41CE}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cocaUtils", "..\..\cocaUtils\build\vs2008\cocaUtils.vcproj", "{51ABF89C-5195-CB40-82EA-7B2AC993B597}"
+	ProjectSection(ProjectDependencies) = postProject
+		{797F068B-7412-4F40-8CFC-3B9EB25F41CE} = {797F068B-7412-4F40-8CFC-3B9EB25F41CE}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cocaXML", "..\..\cocaXML\build\vs2008\cocaXML.vcproj", "{F932BC98-9E41-1E43-B06F-5055FB296C2D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{797F068B-7412-4F40-8CFC-3B9EB25F41CE} = {797F068B-7412-4F40-8CFC-3B9EB25F41CE}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		debug|Win32 = debug|Win32
+		release|Win32 = release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{797F068B-7412-4F40-8CFC-3B9EB25F41CE}.debug|Win32.ActiveCfg = debug|Win32
+		{797F068B-7412-4F40-8CFC-3B9EB25F41CE}.debug|Win32.Build.0 = debug|Win32
+		{797F068B-7412-4F40-8CFC-3B9EB25F41CE}.release|Win32.ActiveCfg = release|Win32
+		{797F068B-7412-4F40-8CFC-3B9EB25F41CE}.release|Win32.Build.0 = release|Win32
+		{E16220CA-1092-724F-92B9-26600EB4D9B2}.debug|Win32.ActiveCfg = debug|Win32
+		{E16220CA-1092-724F-92B9-26600EB4D9B2}.debug|Win32.Build.0 = debug|Win32
+		{E16220CA-1092-724F-92B9-26600EB4D9B2}.release|Win32.ActiveCfg = release|Win32
+		{E16220CA-1092-724F-92B9-26600EB4D9B2}.release|Win32.Build.0 = release|Win32
+		{8BAA22A9-A6D3-9240-B3D9-8DCF4B549D9D}.debug|Win32.ActiveCfg = debug|Win32
+		{8BAA22A9-A6D3-9240-B3D9-8DCF4B549D9D}.debug|Win32.Build.0 = debug|Win32
+		{8BAA22A9-A6D3-9240-B3D9-8DCF4B549D9D}.release|Win32.ActiveCfg = release|Win32
+		{8BAA22A9-A6D3-9240-B3D9-8DCF4B549D9D}.release|Win32.Build.0 = release|Win32
+		{93ED348B-74FE-DA46-99CB-AD27CBABB774}.debug|Win32.ActiveCfg = debug|Win32
+		{93ED348B-74FE-DA46-99CB-AD27CBABB774}.debug|Win32.Build.0 = debug|Win32
+		{93ED348B-74FE-DA46-99CB-AD27CBABB774}.release|Win32.ActiveCfg = release|Win32
+		{93ED348B-74FE-DA46-99CB-AD27CBABB774}.release|Win32.Build.0 = release|Win32
+		{EBE32872-27FB-4446-B5A7-66B73162EC9B}.debug|Win32.ActiveCfg = debug|Win32
+		{EBE32872-27FB-4446-B5A7-66B73162EC9B}.debug|Win32.Build.0 = debug|Win32
+		{EBE32872-27FB-4446-B5A7-66B73162EC9B}.release|Win32.ActiveCfg = release|Win32
+		{EBE32872-27FB-4446-B5A7-66B73162EC9B}.release|Win32.Build.0 = release|Win32
+		{930AE06E-94D4-9846-84C2-856BE2C515E8}.debug|Win32.ActiveCfg = debug|Win32
+		{930AE06E-94D4-9846-84C2-856BE2C515E8}.debug|Win32.Build.0 = debug|Win32
+		{930AE06E-94D4-9846-84C2-856BE2C515E8}.release|Win32.ActiveCfg = release|Win32
+		{930AE06E-94D4-9846-84C2-856BE2C515E8}.release|Win32.Build.0 = release|Win32
+		{691C2685-FC8A-9944-8D0E-DB45D09CA37A}.debug|Win32.ActiveCfg = debug|Win32
+		{691C2685-FC8A-9944-8D0E-DB45D09CA37A}.debug|Win32.Build.0 = debug|Win32
+		{691C2685-FC8A-9944-8D0E-DB45D09CA37A}.release|Win32.ActiveCfg = release|Win32
+		{691C2685-FC8A-9944-8D0E-DB45D09CA37A}.release|Win32.Build.0 = release|Win32
+		{51ABF89C-5195-CB40-82EA-7B2AC993B597}.debug|Win32.ActiveCfg = debug|Win32
+		{51ABF89C-5195-CB40-82EA-7B2AC993B597}.debug|Win32.Build.0 = debug|Win32
+		{51ABF89C-5195-CB40-82EA-7B2AC993B597}.release|Win32.ActiveCfg = release|Win32
+		{51ABF89C-5195-CB40-82EA-7B2AC993B597}.release|Win32.Build.0 = release|Win32
+		{F932BC98-9E41-1E43-B06F-5055FB296C2D}.debug|Win32.ActiveCfg = debug|Win32
+		{F932BC98-9E41-1E43-B06F-5055FB296C2D}.debug|Win32.Build.0 = debug|Win32
+		{F932BC98-9E41-1E43-B06F-5055FB296C2D}.release|Win32.ActiveCfg = release|Win32
+		{F932BC98-9E41-1E43-B06F-5055FB296C2D}.release|Win32.Build.0 = release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

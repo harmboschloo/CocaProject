@@ -1,0 +1,64 @@
+// Copyright (C) 2007-2008 Harm Boschloo
+
+#ifndef EDITOR_DEFS_H_INCLUDED
+#define EDITOR_DEFS_H_INCLUDED
+
+#include <wx/defs.h>
+
+enum EEditorId
+{
+    // window ids
+    E_ID_EDITOR_FRAME = wxID_HIGHEST+1,
+    E_ID_LOG_MESSAGES_VIEWER,
+    E_ID_COMPONENT_SELECTION_DIALOG,
+    // doc/view commands
+    E_ID_FIRST_COMMAND,
+    E_ID_ADD_SYSTEM_EDITOR_VIEW = E_ID_FIRST_COMMAND,
+    // system commands
+    E_ID_EDIT_SYSTEM_DESCRIPTION,
+    E_ID_EDIT_SYSTEM_ROOT,
+    E_ID_REMOVE_SYSTEM_ROOT,
+    // node commands
+    E_ID_EDIT_NODE_NAME,
+    E_ID_ENABLE_NODE,
+    E_ID_DISABLE_NODE,
+    E_ID_MOVE_NODE_UP,
+    E_ID_MOVE_NODE_DOWN,
+    E_ID_APPEND_NODE,
+    E_ID_REMOVE_NODE,
+    // attribute commands
+    E_ID_EDIT_ATTRIBUTE_VALUE,
+    E_ID_GO_TO_SINK,
+    E_ID_REMOVE_SINK,
+    E_ID_GO_TO_SOURCE,
+    E_ID_REMOVE_SOURCE,
+    E_ID_LAST_COMMAND = E_ID_REMOVE_SOURCE,
+    // misc ids
+    E_ID_OK,
+    E_ID_YES,
+    E_ID_NO,
+    E_ID_CANCEL,
+    E_ID_COMPONENT_NODE,
+    E_ID_COMPOSITE_NODE,
+    E_ID_SYSTEM,
+    E_ID_LAST
+};
+
+enum EStatusField
+{
+    E_GENERAL_STATUS_FIELD,
+    E_TICK_RATE_STATUS_FIELD,
+    E_NUMBER_OF_STATUS_FIELDS
+};
+
+enum EImageIndex
+{
+    E_COCA_IMAGE,
+    E_COMPOSITE_IMAGE,
+    E_COMPONENT_IMAGE,
+    E_COCA_IMAGE_DISABLED,
+    E_COMPOSITE_IMAGE_DISABLED,
+    E_COMPONENT_IMAGE_DISABLED
+};
+
+#endif // EDITOR_DEFS_H_INCLUDED

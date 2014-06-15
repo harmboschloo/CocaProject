@@ -1,0 +1,2 @@
+url: https://wxpropgrid.svn.sourceforge.net/svnroot/wxpropgrid/trunk
+revision: 1306
