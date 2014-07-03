@@ -3,11 +3,12 @@
 all_projects/vs2008/**
 !all_projects/vs2008/*.bat
 !all_projects/vs2008/*.sln
+coca/include/coca/interfaces/*.h
 coca/**/autogen
 **/codeblocks/*.layout
 **/build/config.*.*.lua
 **/build/codeblocks
 **/build/vs2008
 **/build/gmake
-**/doc/**
-!**/doc/*.Doxyfile
+**/doc/*.chm
+**/doc/html

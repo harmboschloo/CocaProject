@@ -1,1 +1,0 @@
-call "%COCA_LOCATION%\run" "test_timer.xml" -w -c
